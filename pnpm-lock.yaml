@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  remeda:
+    specifier: ^2.2.2
+    version: 2.2.2
   ts-pattern:
     specifier: ^5.2.0
     version: 5.2.0
@@ -110,8 +113,19 @@ packages:
     dev: true
     optional: true
 
+  /remeda@2.2.2:
+    resolution: {integrity: sha512-mPVhqJ39G+Yb6fljuNjdcUMY+leZ9Jz+3KUnvVTysIz4HSpKsBgoiEsNnYzmFPNjTRRNqL+Uhia0tCgKuRL6jw==}
+    dependencies:
+      type-fest: 4.21.0
+    dev: false
+
   /ts-pattern@5.2.0:
     resolution: {integrity: sha512-aGaSpOlDcns7ZoeG/OMftWyQG1KqPVhgplhJxNCvyIXqWrumM5uIoOSarw/hmmi/T1PnuQ/uD8NaFHvLpHicDg==}
+    dev: false
+
+  /type-fest@4.21.0:
+    resolution: {integrity: sha512-ADn2w7hVPcK6w1I0uWnM//y1rLXZhzB9mr0a3OirzclKF1Wp6VzevUmzz/NRAWunOT6E8HrnpGY7xOfc6K57fA==}
+    engines: {node: '>=16'}
     dev: false
 
   /typescript@5.5.3:

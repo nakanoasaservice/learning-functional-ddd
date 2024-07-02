@@ -1,5 +1,8 @@
 {
   "notebook.defaultFormatter": "biomejs.biome",
   "editor.formatOnSave": true,
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "cSpell.words": [
+    "Unvalidated"
+  ]
 }

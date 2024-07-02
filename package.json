@@ -5,6 +5,7 @@
 		"zod": "^3.23.8"
 	},
 	"dependencies": {
+		"remeda": "^2.2.2",
 		"ts-pattern": "^5.2.0"
 	}
 }
