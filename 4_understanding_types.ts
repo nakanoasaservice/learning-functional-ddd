@@ -49,7 +49,7 @@ const { first, last } = aPerson;
 
 // const anOrderQtyInWeight: OrderQuantity = 2.3 as KilogramQuantity;
 
-// このようにすることで実行時に判別できる
+// 判別可能なオブジェクト型でくるむことで解決する（タグ付きユニオン型）
 type UnitQuantity = { type: 'UnitQuantity'; value: number };
 type KilogramQuantity = { type: 'KilogramQuantity'; value: number };
 type OrderQuantity = UnitQuantity | KilogramQuantity;
