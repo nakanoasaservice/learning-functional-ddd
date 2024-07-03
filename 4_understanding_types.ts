@@ -23,7 +23,7 @@ type FruitSalad = {
 
 type FruitSnack = AppleVariety | BananaVariety | CherryVariety;
 
-// 単純型を定義するためのユーティリティ関数
+// 単純型を定義するためのユーティリティ型
 type Brand<T, U> = T & { __brand: U };
 
 type ProductCode = Brand<string, 'ProductCode'>;
@@ -41,13 +41,19 @@ const { first, last } = aPerson;
 // const last = aPerson.last;
 
 // この方法だと実行時に判別できない
-// type UnitQuantity = Brand<number, "UnitQuantity">;
-// type KilogramQuantity = Brand<number, "KilogramQuantity">;
-// type OrderQuantity = UnitQuantity | KilogramQuantity;
+namespace C4_4FailedCase {
+  type UnitQuantity = Brand<number, 'UnitQuantity'>;
+  type KilogramQuantity = Brand<number, 'KilogramQuantity'>;
+  type OrderQuantity = UnitQuantity | KilogramQuantity;
 
-// const anOrderQtyInUnits: OrderQuantity = 1 as UnitQuantity;
+  const anOrderQtyInUnits: OrderQuantity = 1 as UnitQuantity;
 
-// const anOrderQtyInWeight: OrderQuantity = 2.3 as KilogramQuantity;
+  const anOrderQtyInWeight: OrderQuantity = 2.3 as KilogramQuantity;
+
+  const printQuantity = (aOrderQty: OrderQuantity) => {
+    // UnitQuantityとKilogramQuantityのどちらかを判別する方法がない
+  };
+}
 
 // 判別可能なオブジェクト型でくるむことで解決する（タグ付きユニオン型）
 type UnitQuantity = { type: 'UnitQuantity'; value: number };
